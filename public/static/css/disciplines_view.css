@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*ссылка по дефолту*/
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+/*ссылка при наведении*/
+a:hover{
+    text-decoration: underline;
+    color: orangered;
+}
+
+/*голова*/
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #10A531;
+
+}
+/*Навигация*/
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    width: 99%;
+    height: 50px;
+    /*border: 1px solid crimson;*/
+    margin-left: 80px;
+    margin-top: 40px;
+    font-size: 18pt;
+}
+/*Блок для логина и места под аватарку*/
+.for-login{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+}
+.login{
+    margin-top: 40px;
+    color: whitesmoke;
+    font-size: 16pt;
+}
+/*пока скрулгим аватарку(пустую)*/
+.circle{
+    width: 80px;
+    height: 80px;
+    border-radius: 15%;
+    background-color: gray;
+    margin-top: 10px;
+}
+
+/*тело main*/
+main{
+    min-height: 760px;
+    height: auto;
+}
+main > div{
+    width: 1000px;
+    margin-left: 35%;
+    margin-top: 2.5%;
+    font-size: 18pt;
+}
+
+/*подвал(один раз и больше не трогать!)*/
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #10A531;
+}

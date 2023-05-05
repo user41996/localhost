@@ -10,13 +10,14 @@ class User extends Model implements IdentityInterface
 {
     use HasFactory;
 
-    public $timestamps = false;
-    protected $fillable = [
-        'name',
-        'login',
-        'password'
-    ];
+    public $timestamps = false; //отключаем временные метки
 
+    //список полей модели, разрешённых для массового присвоения
+    protected $fillable = [
+        'login',
+        'password',
+    ];
+    //хэширование пароля
     protected static function booted()
     {
         static::created(function ($user) {
@@ -42,5 +43,10 @@ class User extends Model implements IdentityInterface
     {
         return self::where(['login' => $credentials['login'],
             'password' => md5($credentials['password'])])->first();
+    }
+    //
+    public function hasRole($roles): bool
+    {
+        return in_array($this->role, $roles);
     }
 }

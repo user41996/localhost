@@ -10,23 +10,23 @@
 <body>
 <header>
     <nav>
-        <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
+        <a href="<?= app()->route->getUrl('/hello') ?>"></a>
         <?php
         if (!app()->auth::check()):
             ?>
-            <a href="<?= app()->route->getUrl('/login') ?>">Вход</a>
-            <a href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
+            <a href="<?= app()->route->getUrl('/login') ?>"></a>
+            <a href="<?= app()->route->getUrl('/signup') ?>"></a>
         <?php
         else:
             ?>
-            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
+            <a href="<?= app()->route->getUrl('/logout') ?>">Выход </a>
         <?php
         endif;
         ?>
     </nav>
 </header>
 <main>
-    <?= $content ?? '' ?>
+<?= $content ?? '' ?>
 </main>
 
 </body>
